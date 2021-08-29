@@ -1,10 +1,10 @@
-# Unity Utilities
+# Unity Rasa
 
 This package provides easier access to NLP tools by exposing it via graph nodes. The goal of this project is to provide a complete suite of NLP tools directly through the Rasa Tree Flow Graph.
 
 ![RasaTreeSimpleExample](Pictures~/RasaTreeSimpleExample.png)
 
-- [Unity Utilities](#unity-utilities)
+- [Unity Rasa](#unity-rasa)
   - [Installation](#installation)
   - [Support the project!](#support-the-project)
   - [Join the community!](#join-the-community)
