@@ -10,14 +10,13 @@ This package provides easier access to NLP tools by exposing it via graph nodes.
   - [Join the community!](#join-the-community)
   - [License](#license)
   - [References](#references)
-  - [Credits](#credits)
 
 ## Installation
 
 This package depends on:
 - vx.util (UnityUtil)
 
-1. Clone [UnityUtil](https://github.com/voxell-tech/UnityUtil.git) your project's `Packages` folder.
+1. Clone the [UnityUtil](https://github.com/voxell-tech/UnityUtil.git) repository into your project's `Packages` folder.
 2. Clone this repository into your project's `Packages` folder.
 3. And you are ready to go!
 
@@ -46,12 +45,4 @@ See [license file](./LICENSE) for details.
 
 ## References
 
-- https://github.com/dbrizov/NaughtyAttributes
-
-## Credits
-
-Python Logo by [Jessica Williamson](https://www.behance.net/gallery/96750899/Python-Logo-Redesign):
-
-<a href ="https://discord.gg/WDBnuNH" target="_blank">
-  <img src="Resources/PythonLogo.png" alt="python_logo" width="50px" height="50px"/>
-</a>
+- https://www.youtube.com/watch?v=nKpM98I7PeM
