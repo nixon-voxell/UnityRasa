@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="RasaEditorWindow.uss" />
+    <uie:Toolbar style="background-color: rgb(47, 47, 47); border-left-color: rgb(47, 47, 47); border-right-color: rgb(47, 47, 47); border-top-color: rgb(47, 47, 47); border-bottom-color: rgb(47, 47, 47); border-bottom-width: 0;">
+        <ui:Button text="Save Asset" display-tooltip-when-elided="true" name="save-asset" enable-rich-text="false" class="rasaButton" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(47, 47, 47); border-left-color: rgb(37, 37, 37); border-right-color: rgb(37, 37, 37); border-top-color: rgb(37, 37, 37); border-bottom-color: rgb(37, 37, 37);" />
+        <uie:ToolbarSpacer style="border-left-width: 1px; border-right-width: 1px; border-left-color: rgba(37, 37, 37, 255); border-right-color: rgba(37, 37, 37, 255); border-top-color: rgba(37, 37, 37, 255); border-bottom-color: rgba(37, 37, 37, 255); width: 8px;" />
+        <ui:Button text="Show In Project" display-tooltip-when-elided="true" name="show-in-project" enable-rich-text="false" class="rasaButton" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(47, 47, 47); border-left-color: rgb(37, 37, 37); border-right-color: rgb(37, 37, 37); border-top-color: rgb(37, 37, 37); border-bottom-color: rgb(37, 37, 37);" />
+        <uie:ToolbarSpacer style="border-left-width: 1px; border-right-width: 1px; border-left-color: rgb(37, 37, 37); border-right-color: rgb(37, 37, 37); border-top-color: rgb(37, 37, 37); border-bottom-color: rgb(37, 37, 37); width: 8px;" />
+    </uie:Toolbar>
+    <Voxell.UI.SplitView fixed-pane-initial-dimension="300">
+        <ui:VisualElement name="left-panel" style="min-width: auto; min-height: auto; width: auto;">
+            <ui:Label text="Inspector" display-tooltip-when-elided="true" focusable="false" name="inspector-label" style="padding-top: 2px; padding-right: 0; padding-left: 4px; background-color: rgb(37, 37, 37);" />
+            <Voxell.UI.InspectorView style="display: flex; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 2px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel">
+            <Voxell.UI.RasaGraphView focusable="true" style="flex-direction: column-reverse; flex-grow: 1;" />
+        </ui:VisualElement>
+    </Voxell.UI.SplitView>
+</ui:UXML>

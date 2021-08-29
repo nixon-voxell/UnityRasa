@@ -1,0 +1,19 @@
+{
+    "name": "VX.Rasa.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d78ed8617de1b4648b3f8471c56cd7fc",
+        "GUID:4988cf9794f41d64c884876ab6574b89"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
