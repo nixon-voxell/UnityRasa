@@ -13,6 +13,7 @@
   "unityRelease": "0f1",
   "version": "1.0.0",
   "dependencies": {
-    "voxell.util": ""
+    "voxell.util": "",
+    "com.unity.searcher": "4.3.2"
   }
 }
