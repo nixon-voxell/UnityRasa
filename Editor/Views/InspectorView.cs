@@ -20,6 +20,7 @@ All rights reserved.
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor;
+using Voxell.Rasa;
 
 namespace Voxell.UI
 {
@@ -27,9 +28,6 @@ namespace Voxell.UI
   {
     public new class UxmlFactory : UxmlFactory<InspectorView, VisualElement.UxmlTraits> {}
     private Editor _editor;
-
-    public InspectorView()
-    {}
 
     public void UpdateSelection(RasaNodeView nodeView)
     {

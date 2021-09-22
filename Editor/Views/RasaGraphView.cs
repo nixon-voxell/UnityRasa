@@ -128,6 +128,8 @@ namespace Voxell.UI
           }
         }
       }
+
+      ClearSelection();
     }
 
     /// <summary>

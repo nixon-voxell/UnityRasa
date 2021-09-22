@@ -22,14 +22,14 @@ using System.Collections.Generic;
 
 namespace Voxell.Rasa
 {
-  public class RandomString : RandomNode<string>
+  public class RandomStringNode : RandomNode<string>
   {
     new public static string pathName = "Random/Random String";
 
     public override List<PortInfo> CreateInputPorts()
     {
       List<PortInfo> portInfos = base.CreateInputPorts();
-      portInfos.Add(new PortInfo(CapacityInfo.Multi, typeof(string), "data", EdgeColor.str));
+      portInfos.Add(new PortInfo(CapacityInfo.Single, typeof(List<string>), "list", EdgeColor.strList));
       return portInfos;
     }
 

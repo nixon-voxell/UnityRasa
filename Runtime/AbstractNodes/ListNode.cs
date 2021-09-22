@@ -18,21 +18,20 @@ All rights reserved.
 */
 
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Voxell.Rasa
 {
-  public abstract class RandomNode<T> : ActionNode
+  public abstract class ListNode<T> : ActionNode
   {
-    public T selection;
+    public List<T> list;
 
     public override void OnEnable()
     {
       base.OnEnable();
-      // connection of other ports to the data port at the random node
-      if (!fieldNames.Contains("list"))
+      // connection of other ports to the data port
+      if (!fieldNames.Contains("data"))
       {
-        fieldNames.Add("list");
+        fieldNames.Add("data");
         connections.Add(new Connection());
       }
     }
@@ -40,10 +39,10 @@ namespace Voxell.Rasa
     protected override void OnStart()
     {
       rasaState = RasaState.Running;
+      list = new List<T>();
       Connection connection = connections[0];
-      List<T> list = (List<T>)connection.GetValue(0);
-      int selectionIdx = Random.Range(0, list.Count);
-      selection = list[selectionIdx];
+      for (int c=0; c < connection.rasaNodes.Count; c++)
+        list.Add((T)connection.GetValue(c));
     }
     protected override RasaState OnUpdate() => RasaState.Success;
     protected override void OnStop() {}

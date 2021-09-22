@@ -19,13 +19,14 @@ All rights reserved.
 
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Voxell.Rasa
 {
   public abstract class ActionNode : RasaNode
   {
-    public ActionNode parentNode;
-    public ActionNode childNode;
+    [HideInInspector] public ActionNode parentNode;
+    [HideInInspector] public ActionNode childNode;
 
     public RasaState Update()
     {
