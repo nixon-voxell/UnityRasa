@@ -18,12 +18,13 @@ All rights reserved.
 */
 
 using System.Collections.Generic;
+using Voxell.Inspector;
 
 namespace Voxell.Rasa
 {
   public abstract class ListNode<T> : ActionNode
   {
-    public List<T> list;
+    [InspectOnly] public List<T> list;
 
     public override void OnEnable()
     {

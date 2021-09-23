@@ -19,12 +19,13 @@ All rights reserved.
 
 using System.Collections.Generic;
 using UnityEngine;
+using Voxell.Inspector;
 
 namespace Voxell.Rasa
 {
   public abstract class RandomNode<T> : ActionNode
   {
-    public T selection;
+    [InspectOnly] public T selection;
 
     public override void OnEnable()
     {
