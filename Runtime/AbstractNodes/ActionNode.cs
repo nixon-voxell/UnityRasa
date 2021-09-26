@@ -28,11 +28,11 @@ namespace Voxell.Rasa
     [HideInInspector] public ActionNode parentNode;
     [HideInInspector] public ActionNode childNode;
 
-    public RasaState Update()
+    public RasaState UpdateNode(ref RasaNLP rasaNLP)
     {
       if (rasaState == RasaState.Idle)
       {
-        OnStart();
+        OnStart(ref rasaNLP);
         rasaState = RasaState.Running;
       }
 
@@ -44,7 +44,7 @@ namespace Voxell.Rasa
       return rasaState;
     }
 
-    protected abstract void OnStart();
+    protected abstract void OnStart(ref RasaNLP rasaNLP);
     protected abstract void OnStop();
     protected abstract RasaState OnUpdate();
 

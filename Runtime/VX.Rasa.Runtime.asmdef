@@ -2,7 +2,9 @@
     "name": "VX.Rasa.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:b23efe0d0bd83184681bd63517e3c327"
+        "GUID:b23efe0d0bd83184681bd63517e3c327",
+        "GUID:aa41269285d05ea47a1bf4986430d9e3",
+        "GUID:5d052c2f1dea4e64ab062f48c70faf0e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

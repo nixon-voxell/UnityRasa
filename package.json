@@ -2,7 +2,7 @@
   "name": "voxell.rasa",
   "displayName": "VX Rasa",
   "author": "Nixon",
-  "description": "Rasa tree flow graph in Unity.",
+  "description": "Rasa Tree Flow Graph in Unity.",
   "keywords": [
     "rasa",
     "nlp",
@@ -11,9 +11,10 @@
   "license": "GPL v3.0",
   "unity": "2020.4",
   "unityRelease": "0f1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "dependencies": {
-    "voxell.util": "",
+    "voxell.util": "1.1.0",
+    "voxell.nlp": "1.1.0",
     "com.unity.searcher": "4.3.2"
   }
 }

@@ -18,27 +18,22 @@ All rights reserved.
 */
 
 using UnityEngine;
+using Voxell.NLP.Tokenize;
 using Voxell.Inspector;
 
 namespace Voxell.Rasa
 {
-  public class RasaTreeRunner : MonoBehaviour
+  [System.Serializable]
+  public struct RasaNLP
   {
-    public RasaTree rasaTree;
-    public RasaNLP rasaNLP;
+    public EnglishMaximumEntropyTokenizer maximumEntropyTokenizer;
+    [StreamingAssetFilePath] public string maximumEntropyTokenizerModel;
 
-    [Button]
-    void Start()
+    public void Init()
     {
-      rasaTree.ResetTree();
-      rasaNLP.Init();
-    }
-
-    [Button]
-    void Update()
-    {
-      RasaState rasaState = rasaTree.UpdateTree(ref rasaNLP);
-      if (rasaState == RasaState.Success) rasaTree.ResetTree();
+      maximumEntropyTokenizer = new EnglishMaximumEntropyTokenizer(
+        FileUtil.GetStreamingAssetFilePath(maximumEntropyTokenizerModel)
+      );
     }
   }
 }

@@ -22,9 +22,9 @@ using System.Collections.Generic;
 
 namespace Voxell.Rasa
 {
-  public class StringListNode : ListNode<string>
+  public class StringArrayNode : ArrayNode<string>
   {
-    new public static string pathName = "List/String List";
+    new public static string pathName = "List/String Array";
 
     public override List<PortInfo> CreateInputPorts()
     {
@@ -36,7 +36,7 @@ namespace Voxell.Rasa
     public override List<PortInfo> CreateOutputPorts()
     {
       List<PortInfo> portInfos = base.CreateOutputPorts();
-      portInfos.Add(new PortInfo(CapacityInfo.Multi, typeof(List<string>), "list", EdgeColor.strList));
+      portInfos.Add(new PortInfo(CapacityInfo.Multi, typeof(List<string>), "array", EdgeColor.strList));
       return portInfos;
     }
 

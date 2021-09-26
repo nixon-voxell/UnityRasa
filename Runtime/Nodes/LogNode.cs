@@ -37,7 +37,7 @@ namespace Voxell.Rasa
       }
     }
 
-    protected override void OnStart()
+    protected override void OnStart(ref RasaNLP rasaNLP)
     {
       if (connections[0].fieldNames.Count == 1) Debug.Log(connections[0].GetValue(0));
     }

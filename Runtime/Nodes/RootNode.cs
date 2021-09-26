@@ -23,7 +23,7 @@ namespace Voxell.Rasa
 {
   public class RootNode : ActionNode
   {
-    protected override void OnStart() => rasaState = RasaState.Running;
+    protected override void OnStart(ref RasaNLP rasaNLP) => rasaState = RasaState.Running;
     protected override RasaState OnUpdate() => RasaState.Success;
     protected override void OnStop() {}
 

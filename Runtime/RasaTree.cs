@@ -53,7 +53,7 @@ namespace Voxell.Rasa
       }
     }
 
-    public RasaState UpdateTree()
+    public RasaState UpdateTree(ref RasaNLP rasaNLP)
     {
       if (rootNode == null)
       {
@@ -61,8 +61,7 @@ namespace Voxell.Rasa
         return RasaState.Failure;
       }
 
-      if (runningNode.rasaState == RasaState.Idle)
-        runningNode.Update();
+      if (runningNode.rasaState == RasaState.Idle) runningNode.UpdateNode(ref rasaNLP);
       else if (runningNode.rasaState == RasaState.Success)
       {
         if (runningNode.childNode != null)

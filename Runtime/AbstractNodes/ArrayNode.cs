@@ -17,14 +17,13 @@ The Original Code is Copyright (C) 2020 Voxell Technologies.
 All rights reserved.
 */
 
-using System.Collections.Generic;
 using Voxell.Inspector;
 
 namespace Voxell.Rasa
 {
-  public abstract class ListNode<T> : ActionNode
+  public abstract class ArrayNode<T> : ActionNode
   {
-    [InspectOnly] public List<T> list;
+    [InspectOnly] public T[] array;
 
     public override void OnEnable()
     {
@@ -37,13 +36,14 @@ namespace Voxell.Rasa
       }
     }
 
-    protected override void OnStart()
+    protected override void OnStart(ref RasaNLP rasaNLP)
     {
       rasaState = RasaState.Running;
-      list = new List<T>();
       Connection connection = connections[0];
-      for (int c=0; c < connection.rasaNodes.Count; c++)
-        list.Add((T)connection.GetValue(c));
+      int arrayLength = connection.rasaNodes.Count;
+      array = new T[arrayLength];
+      for (int c=0; c < arrayLength; c++)
+        array[c] = ((T)connection.GetValue(c));
     }
     protected override RasaState OnUpdate() => RasaState.Success;
     protected override void OnStop() {}
