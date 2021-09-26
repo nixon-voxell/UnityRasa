@@ -1,5 +1,8 @@
 ## [1.1.0]
 
+- Changes
+  - ListNode -> ArrayNode (faster)
+
 - New Features
   - Tokenizer Node: tokenize sentence *(string)* into array of tokens *(strings)*
 
