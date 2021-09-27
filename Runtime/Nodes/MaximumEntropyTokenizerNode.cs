@@ -19,7 +19,6 @@ All rights reserved.
 
 using System;
 using System.Collections.Generic;
-using Voxell.NLP.Tokenize;
 
 namespace Voxell.Rasa
 {
@@ -53,7 +52,7 @@ namespace Voxell.Rasa
     public override bool OnRemoveInputPort(RasaNode rasaNode, Type portType, string portName)
     {
       if (base.OnRemoveInputPort(rasaNode, portType, portName)) return true;
-      else 
+      else
       {
         connections[0].RemoveAt(0);
         return true;

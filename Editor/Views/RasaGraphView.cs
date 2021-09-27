@@ -137,13 +137,13 @@ namespace Voxell.UI
     /// </summary>
     private SearcherItem RecursiveMenuGeneration(SearcherItem parentItem, int pathIdx, ref string[] paths)
     {
-      SearcherItem item = new SearcherItem(paths[pathIdx]);
+      List<string> existingPaths = parentItem.Children.Select(item => item.Name).ToList();
       int parentIdx;
-      if (parentItem.Children.Contains(item)) parentIdx = parentItem.Children.IndexOf(item);
+      if (existingPaths.Contains(paths[pathIdx])) parentIdx = existingPaths.IndexOf(paths[pathIdx]);
       else
       {
         parentIdx = parentItem.Children.Count;
-        parentItem.AddChild(item);
+        parentItem.AddChild(new SearcherItem(paths[pathIdx]));
       }
 
       if (++pathIdx < paths.Length)
@@ -173,8 +173,9 @@ namespace Voxell.UI
         _nodeMap.Add(paths.Last(), p);
 
         SearcherItem parentItem = new SearcherItem(paths[0]);
+        List<string> existingPaths = _searcherItems.Select(item => item.Name).ToList();
         int parentIdx;
-        if (_searcherItems.Contains(parentItem)) parentIdx = _searcherItems.IndexOf(parentItem);
+        if (existingPaths.Contains(paths[0])) parentIdx = existingPaths.IndexOf(paths[0]);
         else
         {
           parentIdx = _searcherItems.Count;

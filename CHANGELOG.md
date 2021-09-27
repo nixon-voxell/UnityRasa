@@ -4,7 +4,8 @@
   - ListNode -> ArrayNode (faster)
 
 - New Features
-  - Tokenizer Node: tokenize sentence *(string)* into array of tokens *(strings)*
+  - Maximum Entropy Tokenizer Node: tokenize sentence *(string)* into an array of tokens *(strings)*
+  - Maximum Entropy Sentence Detector Node: split paragraph *(string)* into an array of individual sentences *(strings)*
 
 ## [1.0.0]
 

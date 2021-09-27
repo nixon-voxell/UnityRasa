@@ -22,14 +22,14 @@ using System.Collections.Generic;
 
 namespace Voxell.Rasa
 {
-  public class StringArrayNode : ArrayNode<string>
+  public class MaximumEntropySentenceDetectorNode : ArrayNode<string>
   {
-    new public static string pathName = "List/String Array";
+    new public static string pathName = "NLP/Maximum Entropy Sentence Detector";
 
     public override List<PortInfo> CreateInputPorts()
     {
       List<PortInfo> portInfos = base.CreateInputPorts();
-      portInfos.Add(new PortInfo(CapacityInfo.Multi, typeof(string), "data", EdgeColor.str));
+      portInfos.Add(new PortInfo(CapacityInfo.Single, typeof(string), "data", EdgeColor.str));
       return portInfos;
     }
 
@@ -57,6 +57,14 @@ namespace Voxell.Rasa
         connections[0].RemoveAt(0);
         return true;
       }
+    }
+
+    protected override void OnStart(ref RasaNLP rasaNLP)
+    {
+      rasaState = RasaState.Running;
+      Connection connection = connections[0];
+      string text = (string)connection.GetValue(0);
+      array = rasaNLP.maximumEntropySentenceDetector.SentenceDetect(text);
     }
   }
 }

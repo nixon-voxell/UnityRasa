@@ -78,7 +78,8 @@ namespace Voxell.Rasa.UI
       for (int n=0; n < rasaTree.rasaNodes.Count; n++)
       {
         RasaNode rasaNode = rasaTree.rasaNodes[n];
-        AssetDatabase.AddObjectToAsset(rasaNode, rasaTree);
+        if (!AssetDatabase.Contains(rasaNode))
+          AssetDatabase.AddObjectToAsset(rasaNode, rasaTree);
       }
 
       AssetDatabase.SaveAssets();
