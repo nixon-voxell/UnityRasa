@@ -13,14 +13,15 @@ This package provides easier access to NLP tools by exposing it via graph nodes.
 
 ## Installation
 
-This package depends on:
-- voxell.util (UnityUtil)
-- voxell.ai (UnityAI)
-- voxell.nlp (UnityNLP)
+External dependencies:
 
-1. Clone the [UnityUtil](https://github.com/voxell-tech/UnityUtil.git) repository into your project's `Packages` folder.
-2. Clone the [UnityAI](https://github.com/voxell-tech/UnityAI.git) repository into your project's `Packages` folder.
-3. Clone the [UnityNLP](https://github.com/voxell-tech/UnityNLP.git) repository into your project's `Packages` folder.
+- VX Util ([UnityUtil](https://github.com/voxell-tech/UnityUtil))
+- VX AI ([UnityAI](https://github.com/voxell-tech/UnityAI))
+- VX NLP ([UnityNLP](https://github.com/voxell-tech/UnityNLP))
+
+1. Clone the [UnityUtil](https://github.com/voxell-tech/UnityUtil) repository into your project's `Packages` folder.
+2. Clone the [UnityAI](https://github.com/voxell-tech/UnityAI) repository into your project's `Packages` folder.
+3. Clone the [UnityNLP](https://github.com/voxell-tech/UnityNLP) repository into your project's `Packages` folder.
 4. Clone this repository into your project's `Packages` folder.
 5. And you are ready to go!
 
