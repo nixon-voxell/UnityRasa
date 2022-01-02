@@ -22,11 +22,11 @@ namespace Voxell.Rasa
     public void Init()
     {
       maximumEntropyTokenizer = new EnglishMaximumEntropyTokenizer(
-        FileUtil.GetStreamingAssetFilePath(maximumEntropyTokenizerModel)
+        FileUtilx.GetStreamingAssetFilePath(maximumEntropyTokenizerModel)
       );
 
       maximumEntropySentenceDetector = new EnglishMaximumEntropySentenceDetector(
-        FileUtil.GetStreamingAssetFilePath(maximumEntropySentenceDetectorModel)
+        FileUtilx.GetStreamingAssetFilePath(maximumEntropySentenceDetectorModel)
       );
     }
   }

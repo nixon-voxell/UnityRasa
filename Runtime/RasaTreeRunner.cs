@@ -9,16 +9,17 @@ namespace Voxell.Rasa
     public RasaNLP rasaNLP;
 
     [Button]
-    void Start()
+    private void Start()
     {
       rasaTree.ResetTree();
       rasaNLP.Init();
     }
 
     [Button]
-    void Update()
+    private void Update()
     {
       RasaState rasaState = rasaTree.UpdateTree(ref rasaNLP);
+      // as an example, we just reset the tree when the entire tree has been completed
       if (rasaState == RasaState.Success) rasaTree.ResetTree();
     }
   }

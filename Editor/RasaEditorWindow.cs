@@ -52,6 +52,7 @@ namespace Voxell.Rasa.UI
       for (int n=0; n < rasaTree.cachedNodes?.Length; n++)
       {
         RasaNode rasaNode = rasaTree.cachedNodes[n];
+        if (rasaNode == null) continue;
         if (AssetDatabase.Contains(rasaNode))
           AssetDatabase.RemoveObjectFromAsset(rasaTree.cachedNodes[n]);
       }
